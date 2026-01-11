@@ -18,7 +18,6 @@ def subscription_for_course_updates(course, email):
         recipient_list=[email],
     )
 
-
 @shared_task
 def verification_user():
     now = timezone.now()
