@@ -1,5 +1,6 @@
 from django.db import models
 
+feature_30.2
 from config.settings import AUTH_USER_MODEL
 
 class Course(models.Model):
@@ -51,3 +52,6 @@ class Lesson(models.Model):
 
     def __str__(self):
         return f"{self.lesson_name} {self.lesson_description}"
+
+# Create your models here.
+develop

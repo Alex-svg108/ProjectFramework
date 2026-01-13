@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+feature_30.2
 from materials.models import Course, Lesson
 
 class User(AbstractUser):
@@ -56,3 +57,6 @@ class Payments(models.Model):
 
     def __str__(self):
         return f"Payment {self.payment_date}: {self.payment_amount} {self.payment_method}"
+
+# Create your models here.
+develop
