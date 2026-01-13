@@ -2,7 +2,6 @@ from rest_framework.serializers import ModelSerializer
 
 from users.models import User, Payments
 
-
 class PaymentSerializer(ModelSerializer):
     """Сериализатор для модели Payments"""
 

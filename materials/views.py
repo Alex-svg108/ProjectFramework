@@ -22,7 +22,6 @@ from materials.serializer import (
 from users.permissions import IsModer, IsOwner
 from materials.tasks import subscription_for_course_updates
 
-
 class CourseViewSet(ModelViewSet):
     """API для работы с курсами"""
 

@@ -12,7 +12,6 @@ from users.services import (
     create_stripe_session,
 )
 
-
 class PaymentsViewSet(ModelViewSet):
     """API для работы с платежами"""
 
