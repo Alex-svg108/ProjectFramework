@@ -1,3 +1,5 @@
+feature_32.1
+
 """
 URL configuration for config project.
 
@@ -15,9 +17,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+develop
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('materials/', include("materials.urls", namespace="materials")),
+    path('users/', include("users.urls", namespace="users")),
 ]
