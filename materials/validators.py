@@ -1,6 +1,5 @@
 from rest_framework.serializers import ValidationError
 
-
 class ValidatorYouTube:
     """Проверка на отсутствие в материалах ссылок на сторонние ресурсы, кроме youtube.com"""
 
