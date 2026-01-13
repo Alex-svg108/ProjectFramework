@@ -6,6 +6,7 @@ from materials.views import CourseViewSet, LessonCreateAPIView, LessonListAPIVie
 
 from materials.apps import MaterialsConfig
 
+
 app_name = "materials"
 
 router = SimpleRouter()

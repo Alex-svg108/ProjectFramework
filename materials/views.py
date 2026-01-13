@@ -9,7 +9,6 @@ from materials.pagination import CustomPagination
 from materials.serializer import CourseSerializer, LessonSerializer, CourseDetailSerializer, SubscriptionSerializer
 from users.permissions import IsModer, IsOwner
 
-
 class CourseViewSet(ModelViewSet):
     """ API для работы с курсами """
 
