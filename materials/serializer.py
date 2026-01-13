@@ -3,6 +3,7 @@ from rest_framework.serializers import ModelSerializer
 
 from materials.models import Course, Lesson
 
+
 class LessonSerializer(ModelSerializer):
     """ Сериализатор для модели Lesson. Возвращает количество уроков в курсе """
 

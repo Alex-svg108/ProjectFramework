@@ -6,7 +6,6 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 from users.models import Payments, User
 from users.serializers import PaymentSerializer, UserSerializer
 
-
 class PaymentsViewSet(ModelViewSet):
     """ API для работы с платежами """
 

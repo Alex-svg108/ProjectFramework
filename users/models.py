@@ -3,7 +3,6 @@ from django.db import models
 
 from materials.models import Course, Lesson
 
-
 class User(AbstractUser):
     """ Модель пользователя """
 

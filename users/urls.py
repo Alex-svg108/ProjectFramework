@@ -3,6 +3,7 @@ from rest_framework.routers import SimpleRouter
 
 from users.views import PaymentsViewSet, PaymentCreateAPIView, UserCreateAPIView
 
+
 app_name = "users"
 
 router = SimpleRouter()
