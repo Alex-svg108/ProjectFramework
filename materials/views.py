@@ -6,7 +6,6 @@ from materials.models import Course, Lesson
 from materials.serializer import CourseSerializer, LessonSerializer, CourseDetailSerializer
 from users.permissions import IsModer, IsOwner
 
-
 class CourseViewSet(ModelViewSet):
     """ API для работы с курсами """
 
