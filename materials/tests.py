@@ -5,7 +5,6 @@ from rest_framework.test import APITestCase
 from materials.models import Course, Lesson, Subscription
 from users.models import User
 
-
 class CourseTestCase(APITestCase):
     """Тест для управления курсами"""
 

@@ -6,7 +6,6 @@ from config.settings import SECRET_API_KEY
 
 stripe.api_key = SECRET_API_KEY
 
-
 def create_stripe_product(product):
     """Создаем продукт в страйпе"""
 

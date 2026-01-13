@@ -20,7 +20,7 @@ from materials.serializer import (
     SubscriptionSerializer,
 )
 from users.permissions import IsModer, IsOwner
-from materials.tasks import subscription_for_course_updates, add
+from materials.tasks import subscription_for_course_updates
 
 
 class CourseViewSet(ModelViewSet):

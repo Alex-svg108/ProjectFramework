@@ -13,6 +13,7 @@ from materials.views import (
 
 from materials.apps import MaterialsConfig
 
+
 app_name = "materials"
 
 router = SimpleRouter()

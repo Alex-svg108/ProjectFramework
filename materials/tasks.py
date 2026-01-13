@@ -8,7 +8,6 @@ from django.core.mail import send_mail
 
 from users.models import User
 
-
 @shared_task
 def subscription_for_course_updates(course, email):
     send_mail(
