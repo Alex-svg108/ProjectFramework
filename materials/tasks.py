@@ -19,10 +19,6 @@ def subscription_for_course_updates(course, email):
 
 @shared_task
 def verification_user():
-    now = timezone.now()
-    users = User.objects.filter(
-        last_login__lte=now - timedelta(days=30), is_active=True
-    )
-    for user in users:
-        user.is_active = False
-        user.save()
+    User.objects.filter(
+        last_login__lt=timezone.now() - timezone.timedelta(days=30), is_active=True
+    ).update(is_active=False)
