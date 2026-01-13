@@ -1,6 +1,7 @@
 from django.db import models
 
 
+feature_30.1
 class Course(models.Model):
     course_name = models.CharField(max_length=50, verbose_name="Название курса")
     images = models.ImageField(
@@ -46,3 +47,6 @@ class Lesson(models.Model):
 
     def __str__(self):
         return f"{self.lesson_name} {self.lesson_description}"
+
+# Create your models here.
+develop

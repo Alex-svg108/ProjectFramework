@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
+feature_30.1
 class User(AbstractUser):
     username = None
     email = models.EmailField(unique=True, verbose_name="Email")
@@ -36,3 +37,6 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.email
+
+# Create your models here.
+develop
