@@ -2,7 +2,6 @@ from rest_framework.serializers import ModelSerializer
 
 from materials.models import Course, Lesson
 
-
 class CourseSerializer(ModelSerializer):
     class Meta:
         model = Course

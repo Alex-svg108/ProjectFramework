@@ -4,7 +4,6 @@ from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView,
 from materials.models import Course, Lesson
 from materials.serializer import CourseSerializer, LessonSerializer
 
-
 class CourseViewSet(ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
