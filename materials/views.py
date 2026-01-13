@@ -1,5 +1,4 @@
-from django.utils.decorators import method_decorator
-from drf_yasg.utils import swagger_auto_schema
+from django.core.serializers import get_serializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
@@ -22,6 +21,7 @@ from materials.serializer import (
     SubscriptionSerializer,
 )
 from users.permissions import IsModer, IsOwner
+from materials.tasks import subscription_for_course_updates
 
 class CourseViewSet(ModelViewSet):
     """API для работы с курсами"""
@@ -37,6 +37,15 @@ class CourseViewSet(ModelViewSet):
         course = serializer.save()
         course.owner = self.request.user
         course.save()
+
+    def perform_update(self, serializer):
+        update_course = serializer.save()
+        subscriptions = Subscription.objects.filter(course=update_course)
+        for subscription in subscriptions:
+            subscription_for_course_updates.delay(
+                update_course.course_name, subscription.user.email
+            )
+        update_course.save()
 
     def get_permissions(self):
         if self.action == "create":

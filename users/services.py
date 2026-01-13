@@ -10,9 +10,12 @@ stripe.api_key = SECRET_API_KEY
 def create_stripe_product(product):
     """Создаем продукт в страйпе"""
 
-    title_product =  product.payment_course if product.payment_course else product.payment_lesson
+    title_product = (
+        product.payment_course if product.payment_course else product.payment_lesson
+    )
     stripe_product = stripe.Product.create(name=title_product)
     return stripe_product.get("id")
+
 
 def create_stripe_price(amount, product_id):
     """Создаем цену в страйпе"""
@@ -23,6 +26,7 @@ def create_stripe_price(amount, product_id):
         product_data={"name": product_id},
     )
     return price
+
 
 def create_stripe_session(price):
     """Создаем сессию для оплаты в страйпе"""

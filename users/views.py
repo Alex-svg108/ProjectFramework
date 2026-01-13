@@ -6,6 +6,13 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.filters import OrderingFilter, SearchFilter
 from users.models import Payments, User
 from users.serializers import PaymentSerializer, UserSerializer
+
+from users.services import (
+    create_stripe_product,
+    create_stripe_price,
+    create_stripe_session,
+)
+=======
 from users.services import create_stripe_product, create_stripe_price, create_stripe_session
 
 class PaymentsViewSet(ModelViewSet):
