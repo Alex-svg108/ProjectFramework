@@ -6,19 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('materials', '0002_alter_course_course_description'),
-        ('users', '0002_payments'),
+        ("materials", "0002_alter_course_course_description"),
+        ("users", "0002_payments"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='payments',
-            name='payment_date',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Дата платежа'),
+            model_name="payments",
+            name="payment_date",
+            field=models.DateTimeField(auto_now_add=True, verbose_name="Дата платежа"),
         ),
         migrations.AlterField(
-            model_name='payments',
-            name='payment_lesson',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='materials.lesson', verbose_name='Оплаченный урок'),
+            model_name="payments",
+            name="payment_lesson",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="materials.lesson",
+                verbose_name="Оплаченный урок",
+            ),
         ),
     ]

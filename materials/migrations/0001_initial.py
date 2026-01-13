@@ -7,36 +7,91 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Course',
+            name="Course",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('course_name', models.CharField(max_length=50, verbose_name='Название курса')),
-                ('images', models.ImageField(blank=True, help_text='Загрузите фотографию', null=True, upload_to='course/images', verbose_name='Фото')),
-                ('course_description', models.CharField(max_length=250, verbose_name='Описание')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "course_name",
+                    models.CharField(max_length=50, verbose_name="Название курса"),
+                ),
+                (
+                    "images",
+                    models.ImageField(
+                        blank=True,
+                        help_text="Загрузите фотографию",
+                        null=True,
+                        upload_to="course/images",
+                        verbose_name="Фото",
+                    ),
+                ),
+                (
+                    "course_description",
+                    models.CharField(max_length=250, verbose_name="Описание"),
+                ),
             ],
             options={
-                'verbose_name': 'Курс',
-                'verbose_name_plural': 'Курсы',
+                "verbose_name": "Курс",
+                "verbose_name_plural": "Курсы",
             },
         ),
         migrations.CreateModel(
-            name='Lesson',
+            name="Lesson",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('lesson_name', models.CharField(max_length=50, verbose_name='Название урока')),
-                ('images', models.ImageField(blank=True, help_text='Загрузите фотографию', null=True, upload_to='lesson/images', verbose_name='Фото')),
-                ('lesson_description', models.CharField(max_length=250, verbose_name='Описание')),
-                ('video', models.URLField(blank=True, null=True, verbose_name='Видео')),
-                ('course', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='lessons', to='materials.course', verbose_name='Название курса')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "lesson_name",
+                    models.CharField(max_length=50, verbose_name="Название урока"),
+                ),
+                (
+                    "images",
+                    models.ImageField(
+                        blank=True,
+                        help_text="Загрузите фотографию",
+                        null=True,
+                        upload_to="lesson/images",
+                        verbose_name="Фото",
+                    ),
+                ),
+                (
+                    "lesson_description",
+                    models.CharField(max_length=250, verbose_name="Описание"),
+                ),
+                ("video", models.URLField(blank=True, null=True, verbose_name="Видео")),
+                (
+                    "course",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="lessons",
+                        to="materials.course",
+                        verbose_name="Название курса",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Урок',
-                'verbose_name_plural': 'Уроки',
+                "verbose_name": "Урок",
+                "verbose_name_plural": "Уроки",
             },
         ),
     ]
