@@ -1,5 +1,6 @@
 from django.db import models
 
+feature_32.1
 from config.settings import AUTH_USER_MODEL
 
 class Course(models.Model):
@@ -77,3 +78,6 @@ class Subscription(models.Model):
 
     def __str__(self):
         return f'{self.user}: {self.course}'
+
+# Create your models here.
+develop

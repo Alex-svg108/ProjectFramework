@@ -4,6 +4,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView, \
     get_object_or_404
 
+feature_32.1
 from materials.models import Course, Lesson, Subscription
 from materials.pagination import CustomPagination
 from materials.serializer import CourseSerializer, LessonSerializer, CourseDetailSerializer, SubscriptionSerializer
@@ -92,3 +93,6 @@ class SubscriptionCreateApiView(CreateAPIView):
             Subscription.objects.create(user=user, course=course_item, sign_of_subscription=True)  # Создаем подписку
             message = 'подписка добавлена'
         return Response({"message": message})
+
+# Create your views here.
+develop

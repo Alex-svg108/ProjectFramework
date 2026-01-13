@@ -7,6 +7,7 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 from users.models import Payments, User
 from users.serializers import PaymentSerializer, UserSerializer
 
+
 class PaymentsViewSet(ModelViewSet):
     """ API для работы с платежами """
 
@@ -35,3 +36,7 @@ class UserCreateAPIView(CreateAPIView):
         user = serializer.save(is_active=True)
         user.set_password(user.password)
         user.save()
+
+
+# Create your views here.
+develop

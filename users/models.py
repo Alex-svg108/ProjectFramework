@@ -56,3 +56,5 @@ class Payments(models.Model):
 
     def __str__(self):
         return f"Payment {self.payment_date}: {self.payment_amount} {self.payment_method}"
+
+
