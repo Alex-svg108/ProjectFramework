@@ -11,6 +11,7 @@ from rest_framework.generics import (
     get_object_or_404,
 )
 
+feature_32.1
 from materials.models import Course, Lesson, Subscription
 from materials.pagination import CustomPagination
 from materials.serializer import (
@@ -21,7 +22,6 @@ from materials.serializer import (
 )
 from users.permissions import IsModer, IsOwner
 from materials.tasks import subscription_for_course_updates
-
 
 class CourseViewSet(ModelViewSet):
     """API для работы с курсами"""
@@ -123,3 +123,6 @@ class SubscriptionCreateApiView(CreateAPIView):
             )  # Создаем подписку
             message = "подписка добавлена"
         return Response({"message": message})
+
+# Create your views here.
+develop

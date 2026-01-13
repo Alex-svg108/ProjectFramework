@@ -2,9 +2,9 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
+feature_32.1
 from materials.models import Course, Lesson, Subscription
 from users.models import User
-
 
 class CourseTestCase(APITestCase):
     """Тест для управления курсами"""
@@ -121,5 +121,16 @@ class SubscriptionTestCase(APITestCase):
         data = {"user": self.user, "course": self.course.pk}
         response = self.client.post(url, data)
         data = response.json()
+
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, {"message": "подписка удалена"})
+
+        self.assertEqual(
+            response.status_code, status.HTTP_200_OK
+        )
+        self.assertEqual(
+            data, {'message': 'подписка удалена'}
+        )
+
+# Create your tests here.
+develop

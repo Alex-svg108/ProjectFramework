@@ -1,6 +1,5 @@
 from rest_framework import permissions
 
-
 class IsModer(permissions.BasePermission):
     """Проверяет, является ли пользователь модератором"""
 
